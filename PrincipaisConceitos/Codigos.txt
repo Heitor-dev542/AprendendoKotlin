@@ -1,0 +1,14 @@
+/*Primeiro codigo em kotlin
+ * testando os tipos de variaveis numericas e o println()*/
+
+const val MAX_AGE = 30
+fun main() {
+    var idadeAtual:Int
+    idadeAtual = 24
+println(idadeAtual)
+println(idadeAtual > MAX_AGE)
+
+	var difMaxAge: Int
+    difMaxAge = MAX_AGE - idadeAtual
+println("Tem " + difMaxAge + " anos de diferença entre a idade atual e a idade máxima")
+}
