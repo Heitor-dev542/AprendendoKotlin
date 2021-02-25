@@ -1,14 +1,56 @@
 /*Primeiro codigo em kotlin
  * testando os tipos de variaveis numericas e o println()*/
 
-const val MAX_AGE = 30
+const val MAX_AGE = 68
+const val MIN_AGE = 16
 fun main() {
-    var idadeAtual:Int
-    idadeAtual = 24
-println(idadeAtual)
-println(idadeAtual > MAX_AGE)
+	var idadeAtual:Int
+	idadeAtual = 24
+	 println(idadeAtual)
+	 println(idadeAtual > MAX_AGE)
 
 	var difMaxAge: Int
     difMaxAge = MAX_AGE - idadeAtual
-println("Tem " + difMaxAge + " anos de diferença entre a idade atual e a idade máxima")
+	 println("Tem " + difMaxAge + " anos de diferença entre a idade atual e a idade máxima")
+println("--------------------")
+//Operacoes matematicas
+    var a:Int
+    var b:Int
+    var c:Int
+    a = 2
+    b = 6
+    c = a*b
+	 println("a é igual a " + a)
+	 println("b é igual a " + b)
+	 println("c é igual a " + c)
+	a+=b
+	 println("a agora é igual a " + a)
+println("--------------------")
+
+	// Operadores in e range
+	var lista = listOf(1,5,8,7,9)
+	 println(lista)
+	 println(12 in lista)
+	var bingo = listOf(23,12,31,11)
+	var sorteio = (1..34).random() //uso do range
+	 println(sorteio)
+	 println(sorteio in bingo)
+println("--------------------")
+	// Usando && (E) para duas condições
+    var idade = (1..100).random()
+	 println(idade)
+	 println(idade in MIN_AGE..MAX_AGE) //pode usar assim ou usando os simbolos (<,>,=)
+	 println(idade>=MIN_AGE && idade<=MAX_AGE)
+println("--------------------")
+	// Manipulando STRINGS
+	// Usar "" junto do $ tem algumas vantagens em relação a usar o +
+	 println("O valor de a continua sendo $a")
+	var pedaco1 = "Bem vinda(o)"
+    var pedaco2 = "luisa"
+	 println("$pedaco1, ${pedaco2.capitalize()}!") //Usa {} quando vai chamar um metodo alem do nome da variavel
+     println("${pedaco1.toUpperCase()}") // coloca tudo em letra maiuscula
+     println("${pedaco1.toLowerCase()}") // coloca tudo em letra minuscula
+     println("${pedaco1.decapitalize()}") // coloca a primeira letra em minuscula]
+     println("${pedaco1.replace("vinda(o)","vinda")}") // substituiu um elemento da string por outro
+println("--------------------")
 }
