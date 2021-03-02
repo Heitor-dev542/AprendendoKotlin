@@ -59,9 +59,9 @@ println("--------------------")
      println("${pedaco1.replace("vinda(o)","vinda")}") // substituiu um elemento da string por outro
 println("--------------------")
     // testando as funções criadas
-    val numero1 = 10
-    val numero2 = 30
-    val multTeste = mult(numero1,numero2)
+    var numero1 = 10
+    var numero2 = 30
+    var multTeste = mult(numero1,numero2)
      println("o valor de multTeste é $multTeste")
     val somateste = somaDoisNum(numero1, numero2)
      println ("o valor de somateste é $somateste")
@@ -69,13 +69,13 @@ println("--------------------")
 	// Testando if e else
 	val numero = (1..50).random()
      println("o numero é $numero")
-    val qualidade = if (numero >= 25) "superior" else "inferior"
+    var qualidade = if (numero >= 25) "superior" else "inferior"
      println("a qualidade é $qualidade")
 println("--------------------")
 	// Testando when
-	val numeroD = (1..50).random()
+	var numeroD = (1..50).random()
      println(numeroD)
-    val resultado = when {
+    var resultado = when {
         numeroD<12 -> "é menor que 12"
         numeroD>=12 && numeroD<25 -> "está entre 12 e 25"
         else -> "é maior ou igual a 25"
