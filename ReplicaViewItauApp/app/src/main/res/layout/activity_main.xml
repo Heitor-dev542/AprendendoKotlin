@@ -58,15 +58,8 @@
         android:textSize="26sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titulo"
-        android:layout_marginLeft="12dp" />
-
-    <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/subtitulo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:fadeScrollbars="true">
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recy_list"
@@ -77,11 +70,12 @@
             android:layout_marginEnd="2dp"
             app:spanCount="2"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-            app:layout_constraintTop_toBottomOf="parent"
+            tools:listitem="@layout/item_menu"
+            app:layout_constraintTop_toBottomOf="@+id/subtitulo"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
 
-    </androidx.core.widget.NestedScrollView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
